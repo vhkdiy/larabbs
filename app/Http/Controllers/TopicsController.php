@@ -61,8 +61,8 @@ class TopicsController extends Controller
 
     public function destroy(Topic $topic)
 	{
-		$this->authorize('destroy', $topic);
-		$topic->delete();
+        $this->authorize('destroy', $topic);
+        $topic->delete();
 
         return redirect()->route('topics.index')->with('success', '成功删除！');
 	}
